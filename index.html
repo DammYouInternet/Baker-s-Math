@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niche Tools Suite | Professional Calculators</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --accent: #dca54c;
+            --text-primary: #f0e6d2;
+            --text-secondary: #a89f91;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 1rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: rgba(220, 165, 76, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-launch {
+            margin-top: auto;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-launch::after {
+            content: '→';
+            transition: transform 0.2s;
+        }
+
+        .tool-card:hover .btn-launch::after {
+            transform: translateX(5px);
+        }
+
+        /* Coming Soon Card */
+        .tool-card.coming-soon {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .tool-card.coming-soon:hover {
+            transform: none;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pro Tools Suite</h1>
+    <p class="subtitle">Premium calculators for professionals and enthusiasts.</p>
+
+    <div class="tools-grid">
+        <!-- Baker's Math -->
+        <a href="bakers-math/index.html" class="tool-card">
+            <div class="icon">🥖</div>
+            <h2>Baker's Math Pro</h2>
+            <p>Advanced dough calculator with hydration, salt, yeast, and preferment logic. Includes DDT and cost
+                estimation.</p>
+            <span class="btn-launch">Launch Tool</span>
+        </a>
+
+        <!-- Placeholder for next tool -->
+        <div class="tool-card coming-soon">
+            <div class="icon">🏠</div>
+            <h2>Roofing Estimator</h2>
+            <p>Coming Soon. Calculate material bundles, waste, and costs for roofing projects.</p>
+            <span class="btn-launch">In Development</span>
+        </div>
+
+        <!-- Placeholder for next tool -->
+        <div class="tool-card coming-soon">
+            <div class="icon">💼</div>
+            <h2>Freelance Rates</h2>
+            <p>Coming Soon. Reverse engineer your hourly rate based on lifestyle and tax goals.</p>
+            <span class="btn-launch">In Development</span>
+        </div>
+    </div>
+</body>
+
+</html>
