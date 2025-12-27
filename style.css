@@ -401,6 +401,15 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.product-img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
 .product-card h4 {
     color: var(--text-primary);
     font-family: var(--font-heading);
